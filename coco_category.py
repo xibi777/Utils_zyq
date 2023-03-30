@@ -133,8 +133,14 @@ COCO_CATEGORIES = [
     {"color": [102, 102, 156], "isthing": 0, "id": 199, "name": "wall-other-merged"},
     {"color": [250, 141, 255], "isthing": 0, "id": 200, "name": "rug-merged"},
 ]
-for i in range(len(COCO_CATEGORIES)):
-    color = COCO_CATEGORIES[i]["color"]
+
+for coco in COCO_CATEGORIES:
+    name = coco["name"]
+    color = coco["color"]
     f1 = open("/home/asus/Desktop/coco_name.txt", 'a', encoding='UTF-8')
+    f2 = open("/home/asus/Desktop/coco_color.txt", 'a', encoding='UTF-8')
     f1.write(str(color) + ',')
     f1.close()
+    f2.write("\'" + str(name) + "\',")
+    f2.close()
+
