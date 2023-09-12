@@ -1,6 +1,6 @@
 import os
 from torchvision import utils as vutils
-import matplotlib as plt
+from
 # solution 1
 file_path = '/home/asus/Desktop/M2F_proposal/proposal/' + str(0) + '/'
 os.makedirs(file_path)
